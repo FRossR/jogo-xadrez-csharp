@@ -1,4 +1,4 @@
-﻿namespace Tabuleiro
+﻿namespace tabuleiro
 {
     class Tabuleiro
     {
@@ -7,11 +7,16 @@
 
         private Peca[,] pecas;
 
-        public Tabuleiro(int linhas, int colunas, Peca[,] pecas)
+        public Tabuleiro(int linhas, int colunas)
         {
             this.Linhas = linhas;
             this.Colunas = colunas;
             pecas = new Peca[linhas, colunas];
+        }
+
+        public Peca peca (int linha, int coluna)
+        {
+            return pecas[linha, coluna];
         }
     }
 }
